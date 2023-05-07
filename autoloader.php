@@ -1,6 +1,6 @@
 <?php
 //namespace redaktor;
-define("VER","2023-05-04");
+define("VER","2023-05-07");
 
 spl_autoload_register(function ($class_name) {
     $hablon='/[^\d\w]/';
