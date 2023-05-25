@@ -66,7 +66,6 @@ class Modul implements interface\interface\InterfaceWorkToModul
 
            if (!isset($_SESSION['status']))
               $_SESSION['status']=0;
-           //$_SESSION['status']=0; // удалить
     // перебираем все параметры и выдергиваем данные, которые пришли на вход
     // Ищем имя таблицы
     //-------------------------------------------------------------------------------------------
