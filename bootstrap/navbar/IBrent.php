@@ -5,5 +5,5 @@ namespace bootstrap\navbar;
 // интерфейс для создания классов для брендирования меню navbar
 interface IBrent
 {
-    public function returnBrent($link="#", $text="", $img="");
+    public function returnBrent($link="#", $text="Navbar", $img="");
 }
