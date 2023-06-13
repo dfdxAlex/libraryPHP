@@ -21,12 +21,20 @@ namespace bootstrap\navbar;
  * внутрь тега <a>
  */
 
-class Brent implements IBrent
+class Brand implements IBrand
 {
-    public function returnBrent($link="#", $text="Navbar", $img="")
+    private $link;
+
+    public function __construct(APropertyContainer $link)
     {
+        $this->link = $link;
+    }
+    public function returnBrand($link="#", $text="Navbar", $img="")
+    {
+        $navBarBrand = $this->link->getProperty('navbar-brand');
+        
         if ($link==="no-brand") return "";
         if ($img!=="") $text="<img src='$img' alt='$text'>";
-        return "<a class='navbar-brand' href='$link'>$text</a>";
+        return "<a class='$navBarBrand' href='$link'>$text</a>";
     }
 }

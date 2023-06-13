@@ -2,6 +2,9 @@
 namespace bootstrap\navbar;
 
 /**
+ * the class makes the Singleton implementation of the container's 
+ * property
+ * 
  * класс делает Singleton реализацию проперту контейнера
  */
 

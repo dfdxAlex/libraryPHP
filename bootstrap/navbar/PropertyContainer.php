@@ -15,10 +15,10 @@ class PropertyContainer extends APropertyContainer
     {
         $this->property[$klassOld] = $classNew;
     }
-    
+
     public function getProperty($classNew)
     {
-        if (empty($this->property[$classNew])) return false;
-        return $this->property[$classNew];
+        if (empty($this->property[$classNew])) return $classNew;
+        return (string) $this->property[$classNew];
     }
 }

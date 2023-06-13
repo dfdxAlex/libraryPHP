@@ -19,15 +19,13 @@
 
 include_once "autoloader.php";
 
-// $xxx = new bootstrap\navbar\PropertyContainer;
-// $xxx2 = new bootstrap\navbar\PropertyContainer;
+$x1 = bootstrap\navbar\PropertyContainerS::createPContainer();
+$brand = new bootstrap\navbar\Brand($x1);
+$x1->setProperty("navbar-brand","navbar-brand my-class");
 
-$xxx = bootstrap\navbar\PropertyContainerS::createPContainer();
-$xxx2 = bootstrap\navbar\PropertyContainerS::createPContainer();
 
-$xxx2->setProperty("ddd","rrrrr");
 
-var_dump($xxx->getProperty("ddd"));
+
 
 ?>
 
@@ -37,7 +35,7 @@ var_dump($xxx->getProperty("ddd"));
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <?php echo $brand->returnBrand(); ?>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
