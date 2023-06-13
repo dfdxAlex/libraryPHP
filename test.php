@@ -19,8 +19,13 @@
 
 include_once "autoloader.php";
 
-$xxx = new bootstrap\navbar\PropertyContainer;
+// $xxx = new bootstrap\navbar\PropertyContainer;
+// $xxx2 = new bootstrap\navbar\PropertyContainer;
 
+$xxx = bootstrap\navbar\PropertyContainerS::createPContainer();
+$xxx2 = bootstrap\navbar\PropertyContainerS::createPContainer();
+
+$xxx2->setProperty("ddd","rrrrr");
 
 var_dump($xxx->getProperty("ddd"));
 
