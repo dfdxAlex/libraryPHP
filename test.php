@@ -19,8 +19,10 @@
 
 include_once "autoloader.php";
 
-$xxx = new bootstrap\navbar\Brent;
+$xxx = new bootstrap\navbar\PropertyContainer;
 
+
+var_dump($xxx->getProperty("ddd"));
 
 ?>
 
