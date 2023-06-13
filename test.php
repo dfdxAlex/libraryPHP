@@ -19,26 +19,31 @@
 
 include_once "autoloader.php";
 
+// установка ссылки брендирования
 $x1 = bootstrap\navbar\PropertyContainerS::createPContainer();
+
 $brand = new bootstrap\navbar\Brand($x1);
 $x1->setProperty("navbar-brand","navbar-brand my-class");
+//////////////////////////////////////
+
+// Кнопка сворачивания-разворачивания
+$toggler = new bootstrap\navbar\Toggler($x1);
+
 
 
 
 
 
 ?>
+    
+    
 
-
-
-
-
-<nav class="navbar navbar-expand-lg bg-body-tertiary navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <?php echo $brand->returnBrand(); ?>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+
+    <?php echo $toggler->returnToggler();?>
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
@@ -69,6 +74,8 @@ $x1->setProperty("navbar-brand","navbar-brand my-class");
     </div>
   </div>
 </nav>
+
+
 
     <!-- Вариант 1: Bootstrap в связке с Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
