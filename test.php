@@ -29,6 +29,10 @@ $x1->setProperty("navbar-brand","navbar-brand my-class");
 // Кнопка сворачивания-разворачивания
 $toggler = new bootstrap\navbar\Toggler($x1);
 
+// пункт меню простого
+$navLink = new bootstrap\navbar\NavLink($x1);
+
+
 
 
 
@@ -46,12 +50,12 @@ $toggler = new bootstrap\navbar\Toggler($x1);
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
+        <?php
+           $x1->setProperty("nav-link","nav-link active");
+           echo $navLink->returnNavLink("Home");
+           $x1->setProperty("nav-link","nav-link");
+           echo $navLink->returnNavLink("Link");
+        ?>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
@@ -63,9 +67,10 @@ $toggler = new bootstrap\navbar\Toggler($x1);
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li>
+        <?php
+           $x1->setProperty("nav-link","nav-link disabled");
+           echo $navLink->returnNavLink("Disabled");
+        ?>
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
