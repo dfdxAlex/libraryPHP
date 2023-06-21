@@ -21,7 +21,7 @@ namespace bootstrap\navbar;
  * внутрь тега <a>
  */
 
-class Brand implements IBrand
+class Brand implements IBrand, Service
 {
     private $link;
 

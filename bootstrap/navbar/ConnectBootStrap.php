@@ -7,7 +7,7 @@ namespace bootstrap\navbar;
  * Класс для подключения актуальной для проекта версии bootstrap
  */
 
-class ConnectBootStrap
+class ConnectBootStrap implements Service
 {
     static public function connectCSS()
     {

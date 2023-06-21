@@ -9,7 +9,7 @@ namespace bootstrap\navbar;
  * класс реализует методы чтения и записи данных в контейнер
  */
 
-class PropertyContainer extends APropertyContainer
+class PropertyContainer extends APropertyContainer implements Service
 {
     public function setProperty($klassOld, $classNew)
     {
