@@ -9,7 +9,7 @@ namespace bootstrap\navbar;
 * меню на малом экране.
 */
 
-class Toggler implements IToggler
+class Toggler implements IToggler, Service
 {
     private $link;
 

@@ -7,7 +7,7 @@ namespace bootstrap\navbar;
  * Класс ставит простой элемент меню - список плюс ссылка в нем
  */
 
-class NavLink implements INavLink
+class NavLink implements INavLink, Service
 {
     private $link;
 

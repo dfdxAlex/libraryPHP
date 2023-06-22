@@ -9,7 +9,17 @@ include_once "autoloader.php";
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <?php 
-        $locator = bootstrap\navbar\ServiceLocator::serviceLoc();
+        $x1 = 
+        // $locator = bootstrap\navbar\ServiceLocator::serviceLoc();
+        $locator = new bootstrap\navbar\DependencyInjection(
+          bootstrap\navbar\ConnectBootStrap::connectCSS(),
+          bootstrap\navbar\ConnectBootStrap::connectJS(),
+          bootstrap\navbar\PropertyContainerS::createPContainer(),
+          new bootstrap\navbar\Brand(bootstrap\navbar\PropertyContainerS::createPContainer()),
+          new bootstrap\navbar\Toggler(bootstrap\navbar\PropertyContainerS::createPContainer()),
+          new bootstrap\navbar\NavLink(bootstrap\navbar\PropertyContainerS::createPContainer())
+        );
+
         echo $locator->connectCSS();
     ?>
 
@@ -86,7 +96,6 @@ $x2->searchMas();
 
 
     <?php 
-        // bootstrap\navbar\ConnectBootStrap::connectJS();
         echo $locator->connectJS();
     ?>
   </body>
