@@ -13,6 +13,11 @@ class Translation
     {
         return match (true) {
 
+            $this->str=='Коммерческий опыт' && SelectLanguage::getLenguage()=='ru' => 'Коммерческий опыт',
+            $this->str=='Коммерческий опыт' && SelectLanguage::getLenguage()=='ua' => 'Комерційний досвід',
+            $this->str=='Коммерческий опыт' && SelectLanguage::getLenguage()=='pl' => 'Doświadczenie komercyjne',
+            $this->str=='Коммерческий опыт' && SelectLanguage::getLenguage()=='en' => 'Commercial experience',
+
             $this->str=='Сохраненные CV' && SelectLanguage::getLenguage()=='ru' => 'Сохраненные CV',
             $this->str=='Сохраненные CV' && SelectLanguage::getLenguage()=='ua' => 'Збережені CV',
             $this->str=='Сохраненные CV' && SelectLanguage::getLenguage()=='pl' => 'Zapisane CV',
