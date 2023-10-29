@@ -84,5 +84,3 @@ include_once "autoloader.php";
 
   </body>
 </html>
-
-
